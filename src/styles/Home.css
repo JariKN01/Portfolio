@@ -84,7 +84,7 @@ body {
     display: flex;
     justify-content: center; /* Centreer de afbeeldingen horizontaal */
     align-items: center; /* Centreer de afbeeldingen verticaal */
-    margin-top: -20px; /* Ruimte boven de afbeeldingen */
+    margin-top: 0px; /* Ruimte boven de afbeeldingen */
 }
 
 .scroll-animation img {

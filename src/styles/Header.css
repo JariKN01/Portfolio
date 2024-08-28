@@ -7,6 +7,7 @@
     width: 100%; /* Zorgt ervoor dat de navbar de volledige breedte van het scherm heeft */
     background-color: transparent; /* Voeg een achtergrondkleur toe indien nodig */
     z-index: 1000; /* Zorg ervoor dat de navbar boven andere elementen staat */
+    transition: background-color 0.3s ease;
 }
 
 /* Stijl voor de ul in de navbar */

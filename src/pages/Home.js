@@ -9,7 +9,7 @@ function Home() {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 70) {
+            if (window.scrollY > 200) {
                 setIsVisible(false);
             } else {
                 setIsVisible(true);
