@@ -1,4 +1,88 @@
 .project-container {
-    background-color: #ffffff;
+    background-color: #484848;
     height: 900px;
+}
+
+.h1-project {
+    color: white;
+    text-align: center;
+    padding-top: 80px;
+    font-size: 3rem;
+}
+
+.list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-top: 50px;
+    justify-content: center;
+}
+
+.item {
+    background-image: url("../img/profielfoot.jpg");
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 220px;
+    height: 450px;
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.item:last-child {
+    margin-right: 0;
+}
+
+.list {
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+.list .item{
+    transition: .5s;
+    filter: brightness(10%);
+}
+
+.list .item:hover{
+    filter: brightness(100%);
+    transform: translate(30px) translateY(-20px);
+}
+
+.list .item:has(:hover){
+    filter: brightness(100%);
+    transform: translate(-20px);
+}
+
+.list .item:hover + *{
+    filter: brightness(0.4);
+    transform: translateZ(100px) rotateY(40deg);
+}
+
+.list .item:hover + * + *{
+    filter: brightness(0.3);
+    transform: translateZ(200px) rotateY(20deg);
+}
+
+.list .item:hover + * + * + *{
+    filter: brightness(0.1);
+    transform: translateZ(400px) rotateY(0deg);
+}
+
+.list .item:has(+ *:hover){
+    filter: brightness(0.4);
+    transform: translateZ(-100px) rotateY(-30deg);
+}
+
+.list .item:has( + * + *:hover){
+    filter: brightness(0.3);
+    transform: translateZ(-200px) rotateY(-20deg);
+}
+
+.list .item:has( + * + * + *:hover){
+    filter: brightness(0.1);
+    transform: translateZ(-400px) rotateY(0deg);
 }
