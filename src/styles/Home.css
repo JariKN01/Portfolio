@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    /*background-image: url("../img/video2.mp4"); !* Voegt een achtergrondafbeelding toe *!*/
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Plaatst ruimte tussen tekst en afbeelding */
+    align-items: center; /* Lijnt items verticaal uit in het midden */
+    max-width: 60%; /* Maximaal 80% van de breedte van het scherm */
+    margin: 100px auto; /* Centreert de container horizontaal */
+    height: 700px;
+}
+
+.text {
+    flex: 1; /* Laat de tekstcontainer de resterende ruimte innemen */
+    margin-right: 100px; /* Ruimte tussen de tekst en afbeelding */
+    margin-bottom: 50px;
+}
+
+.home-title {
+    font-size: 4rem;
+    color: black;
+}
+
+
+.text p {
+    font-size: 1.2rem; /* Grootte van de alinea */
+    margin-bottom: 1rem; /* Ruimte onder de alinea */
+    font-weight: 500;
+}
+
+.image img {
+    max-width: 80%; /* Zorgt ervoor dat de afbeelding responsief blijft */
+    height: auto; /* Houdt de afbeelding in verhouding */
+}
+
+.box {
+    position: absolute;
+    top: 45%;
+    left: 67%;
+    width: 450px; /* Pas aan op basis van de gewenste grootte van je box */
+    height: 500px; /* Pas aan op basis van de gewenste grootte van je box */
+    background-color: #84A4FC;
+    transform: translate(-50%, -50%) rotate(0deg); /* Pas de rotatie aan zoals gewenst */
+    z-index: -1; /* Zorg ervoor dat de box achter de afbeelding staat */
+}
+
+.corner-marker {
+    position: absolute;
+    width: 30px; /* Brete van de hoekmarkering */
+    height: 30px; /* Hoogte van de hoekmarkering */
+    border: 4px solid black;
+    background: transparent;
+}
+.corner-marker.tl {
+    top: 20px;
+    left: 20px;
+    border-right: none;
+    border-bottom: none;
+}
+.corner-marker.tr {
+    top: 20px;
+    right: 20px;
+    border-left: none;
+    border-bottom: none;
+}
+.corner-marker.bl {
+    bottom: 20px;
+    left: 20px;
+    border-right: none;
+    border-top: none;
+}
+.corner-marker.br {
+    bottom: 20px;
+    right: 20px;
+    border-left: none;
+    border-top: none;
+}
+
+.scroll-animation {
+    display: flex;
+    justify-content: center; /* Centreer de afbeeldingen horizontaal */
+    align-items: center; /* Centreer de afbeeldingen verticaal */
+    margin-top: -20px; /* Ruimte boven de afbeeldingen */
+}
+
+.scroll-animation img {
+    width: 50px; /* Pas de grootte aan naar behoefte */
+    height: 50px;
+}
+
+.background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    background-color: #000;
+    object-fit: cover;
+}

@@ -1,0 +1,25 @@
+.image iframe {
+    width: 700px;
+    height: 700px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 500px;
+    height: 800px;
+}
+
+.text {
+    flex: 1;
+    margin-right: 100px;
+    margin-bottom: 50px;
+}
+
+.about-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}

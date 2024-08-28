@@ -1,0 +1,87 @@
+/* Basisstijl voor de navbar */
+.navbar {
+    padding: 2rem;
+    position: fixed; /* Zorgt ervoor dat de navbar vast blijft staan */
+    top: 0; /* Positioneer de navbar aan de bovenkant van het scherm */
+    left: 0; /* Zorgt ervoor dat de navbar de volledige breedte heeft */
+    width: 100%; /* Zorgt ervoor dat de navbar de volledige breedte van het scherm heeft */
+    background-color: transparent; /* Voeg een achtergrondkleur toe indien nodig */
+    z-index: 1000; /* Zorg ervoor dat de navbar boven andere elementen staat */
+}
+
+/* Stijl voor de ul in de navbar */
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Verwijder marges van de ul om te zorgen voor een nette uitlijning */
+    justify-content: center; /* Centreer de items horizontaal */
+    align-items: center; /* Centreer de items verticaal */
+    height: 100%; /* Zorg ervoor dat de ul de hoogte van de navbar volgt */
+}
+
+/* Stijl voor de li in de navbar */
+.navbar ul li {
+    display: inline; /* Zorg ervoor dat de li's naast elkaar staan */
+    margin-right: 1rem; /* Voeg ruimte toe tussen de items */
+    position: relative;
+}
+
+/* Stijl voor de links in de navbar */
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+/* Actieve toestand van de navbar */
+.navbar.active {
+    background-color: #333; /* Achtergrondkleur wanneer actief */
+}
+
+/* Kleur van de links wanneer de navbar actief is */
+.navbar.active ul li a {
+    color: white; /* Kleur van de links wanneer actief */
+}
+
+.navbar ul li :hover {
+    color: #058391;
+}
+
+.navbar.active ul li :hover {
+    color: #058391;
+}
+
+.navbar.active ul li :focus {
+    color: #058391;
+}
+
+.navbar  ul li ::after{
+    content: '';
+    height: 3px;
+    width: 100%;
+    background: #2eb0b4;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    opacity: 0;
+    transition: all 0.3s;
+    display: block;
+    pointer-events: none;
+}
+
+.navbar ul li :hover::after {
+    opacity: 1;
+    bottom: -5px;
+}
+
+.navbar ul li :focus::after {
+    opacity: 1;
+    bottom: -5px;
+}
+
+.navbar.active ul li :focus::after {
+    opacity: 1;
+    bottom: -5px;
+}
